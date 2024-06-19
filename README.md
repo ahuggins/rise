@@ -1,13 +1,14 @@
 # Rise
 
-I wanted to learn a bit about Elixir and the Phoenix framework, so this is just me playing around. If you clone locally, you'll need to setup local db sqlite files.
+I wanted to learn a bit about Elixir and the Phoenix framework, so this is just me playing around. If you clone locally, you'll need to setup local things with these commands:
 
-rise_dev.db
-rise_dev.db-shm
-rise_dev.db-wal
-rise_test.db
-rise_test.db-shm
-rise_test.db-wal
+```
+cp config/dev.exs.example config/dev.exs  # creates the project's configuration file
+mix deps.get  # installs the dependencies
+mix ecto.create  # creates the database.
+mix ecto.migrate  # run the database migrations.
+mix phx.server  # run the application.
+```
 
 ### Run migrations with:
 
